@@ -3,35 +3,83 @@
 
 int main()
 {
-    // 1
-    //nombresPairExo1(20);
 
-    // 2
-    //SommeDesNNombresExo2(100);
+    printf("Salut tres cher USER !\n");
+    printf("Choisissez une option parmis les suivantes : \n");
 
-    // 3
-    //fibonacci(10);
+    printf("1--NombresPairExo1\n");
+    printf("2--SommeDesNNombresExo2\n");
+    printf("3--fibonacciExo3\n");
+    printf("4--sommeDesCarresExo4\n");
+    printf("5--nombresPremiersExo5(\n");
+    printf("6--tableDeMultiplicationExo6\n");
+    printf("7--diviseursDeNombreExo7\n");
+    printf("8--premierInferieurAExo8\n");
+    printf("9--estPremierWhileExo9\n");
+    printf("10--palindromeExo10\n");
 
-    // 4
-    //sommeDesCarres(10);
+    int userChoice;
+    scanf("%d", & userChoice);
 
-    // 5
-    //nombresPremiersExo5(50);
+    while(userChoice < 1 || userChoice > 10) {
+        printf("Non Non ! Soyez plus concentré(e), l'option %d n'existe pas dans le menu! :( \n", userChoice);
+        printf("Réessayez!\n");
+        printf("Choisir une option entre 1 et 10 : ");
+        scanf("%d", & userChoice);
+    }
 
-    // 6
-    //tableDeMultiplicationExo6();
-
-    // 7
-    //diviseursDeNombre();
-
-    // 8
-    //premierInferieurAExo8(1000);
-
-    // 9
-    //estPremierWhileExo9();
-
-    // 10
-    palindromeExo10();
+    switch(userChoice) {
+        case 1: {
+            printf("Vous avez choisis l'option %d, voici le resultat : \n", userChoice);
+            nombresPairExo1(20);
+            break;
+        }
+        case 2: {
+            printf("Vous avez choisis l'option %d, voici le resultat : \n", userChoice);
+            SommeDesNNombresExo2(100);
+            break;
+        }
+        case 3: {
+            printf("Vous avez choisis l'option %d, voici le resultat : \n", userChoice);
+            fibonacciExo3(10);
+            break;
+        }
+        case 4: {
+            printf("Vous avez choisis l'option %d, voici le résultat : \n", userChoice);
+            sommeDesCarresExo4(10);
+            break;
+        }
+        case 5: {
+            printf("Vous avez choisis l'option %d, voici le resultat : \n", userChoice);
+            nombresPremiersExo5(50);
+            break;
+        }
+        case 6: {
+            printf("Vous avez choisis l'option %d, voici le resultat : \n", userChoice);
+            tableDeMultiplicationExo6();
+            break;
+        }
+        case 7: {
+            printf("Vous avez choisis l'option %d, voici le resultat : \n", userChoice);
+            diviseursDeNombreExo7();
+            break;
+        }
+        case 8: {
+            printf("Vous avez choisis l'option %d, voici le resultat : \n", userChoice);
+            premierInferieurAExo8(1000);
+            break;
+        }
+        case 9: {
+            printf("Vous avez choisis l'option %d, voici le resultat : \n", userChoice);
+            estPremierWhileExo9();
+            break;
+        }
+        case 10: {
+            printf("Vous avez choisis l'option %d, voici le resultat : \n", userChoice);
+            palindromeExo10();
+            break;
+        }
+    }
 
     return 0;
 }
